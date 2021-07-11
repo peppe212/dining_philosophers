@@ -1,4 +1,4 @@
-//Written by Giuseppe Muschetta on M1 (ARM) architecture
+//Written by Giuseppe Muschetta
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -192,7 +192,7 @@ int main(int argc, char *argv[]) {
     //creo un array di threads per semplificarmi la vita con la successiva join
     pthread_t thread[thread_count];
 
-    //creo un array di pointers per passare l'argomento con piu' precisione
+    //alloco un array ptr per passare l'argomento con piu' precisione
     ptr = (int*)calloc(thread_count,sizeof(*ptr));
     if(ptr == NULL){
         fprintf(stdout,"calloc failed at %d line\n",__LINE__);
